@@ -1,4 +1,4 @@
-import { Investment, InvestmentValue, InvestmentWithValue, Objective } from '@/types/investment';
+import { InvestmentWithValue, Objective } from '@/types/investment';
 import { v4 as uuidv4 } from 'uuid';
 
 // Générer des IDs uniques

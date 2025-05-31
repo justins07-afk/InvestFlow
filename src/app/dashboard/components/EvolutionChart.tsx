@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { AreaChart, Tab, TabGroup, TabList, TabPanel, TabPanels } from '@tremor/react';
+import { AreaChart, Tab, TabGroup, TabList } from '@tremor/react';
 import { formatCurrency } from '@/lib/utils';
 
 interface ChartData {

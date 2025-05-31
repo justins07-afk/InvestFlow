@@ -20,9 +20,6 @@ import EvolutionChart from './components/EvolutionChart';
 import PerformanceCard from './components/PerformanceCard';
 
 export default function DashboardPage() {
-  const [showUpdateModal, setShowUpdateModal] = useState(false);
-  const [showObjectiveModal, setShowObjectiveModal] = useState(false);
-
   // Calcul de l'évolution globale (pour le MVP, on utilise une valeur fixe)
   const portfolioChange = 5.3;
   const fiatChange = 1.8;
@@ -71,8 +68,8 @@ export default function DashboardPage() {
           totalAmount={totalPortfolio}
           percentageChange={portfolioChange}
           objectiveAmount={objective.target_amount}
-          onUpdateValues={() => setShowUpdateModal(true)}
-          onAdjustObjective={() => setShowObjectiveModal(true)}
+          onUpdateValues={() => {}}
+          onAdjustObjective={() => {}}
         />
       </div>
 

@@ -25,9 +25,9 @@ export default function ForgotPasswordPage() {
     try {
       await resetPassword(email);
       setMessage('Si cette adresse email existe dans notre système, vous recevrez un lien pour réinitialiser votre mot de passe.');
-    } catch (err: any) {
+    } catch (err: unknown) {
       console.error('Erreur lors de la réinitialisation du mot de passe:', err);
-      setError(err.message || 'Une erreur est survenue lors de l\'envoi du lien de réinitialisation.');
+      setError(err instanceof Error ? err.message : 'Une erreur est survenue lors de l&apos;envoi du lien de réinitialisation.');
     } finally {
       setIsLoading(false);
     }

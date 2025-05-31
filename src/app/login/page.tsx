@@ -41,11 +41,11 @@ export default function LoginPage() {
           router.push('/dashboard');
         }
       }
-    } catch (err: any) {
-      console.error('Erreur d\'authentification:', err);
+    } catch (err: unknown) {
+      console.error('Erreur d&apos;authentification:', err);
       
       // Gestion des erreurs spécifiques de Supabase
-      if (err.message) {
+      if (err instanceof Error && err.message) {
         switch (err.message) {
           case 'Invalid login credentials':
             setError('Email ou mot de passe incorrect.');
@@ -57,7 +57,7 @@ export default function LoginPage() {
             setError(`Erreur: ${err.message}`);
         }
       } else {
-        setError('Une erreur est survenue lors de l\'authentification.');
+        setError('Une erreur est survenue lors de l&apos;authentification.');
       }
     } finally {
       setIsLoading(false);
@@ -126,7 +126,7 @@ export default function LoginPage() {
               >
                 {isLoading 
                   ? (isSignUp ? 'Inscription en cours...' : 'Connexion en cours...') 
-                  : (isSignUp ? 'S\'inscrire' : 'Se connecter')
+                  : (isSignUp ? 'S&apos;inscrire' : 'Se connecter')
                 }
               </Button>
             </form>
@@ -150,7 +150,7 @@ export default function LoginPage() {
             )}
             
             <p className="text-xs text-zinc-400 mt-2">
-              Pour utiliser l'application, vous devez créer un compte sur Supabase.
+              Pour utiliser l&apos;application, vous devez créer un compte sur Supabase.
             </p>
           </CardFooter>
         </Card>

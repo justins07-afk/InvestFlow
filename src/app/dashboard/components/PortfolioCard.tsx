@@ -49,7 +49,7 @@ export default function PortfolioCard({
 
             <div className="flex flex-col space-y-2">
               <div className="flex justify-between text-sm">
-                <span className="text-zinc-500">Progression vers l'objectif</span>
+                <span className="text-zinc-500">Progression vers l&apos;objectif</span>
                 <span className="font-medium">{Math.round(percentComplete)}%</span>
               </div>
               <div className="h-2 w-full bg-zinc-100 rounded-full overflow-hidden">
